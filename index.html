@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A N Constructions — Civil Engineering &amp; Contracting</title>
+<meta name="description" content="A N Constructions — residential &amp; commercial construction, civil contracts, planning &amp; design, turnkey execution.">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+/* Hero Layout */
+.hero-section {
+  padding: var(--sp-8) 0 var(--sp-9);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--sp-8);
+  align-items: center;
+}
+.hero-title {
+  font-size: var(--fs-hero);
+  margin-bottom: var(--sp-2);
+}
+.hero-desc {
+  color: var(--steel);
+  font-size: var(--fs-md);
+  max-width: 50ch;
+  margin-bottom: var(--sp-6);
+}
+.hero-img-box {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(26,29,32,0.08);
+  aspect-ratio: 4/3;
+  background: #EAE8E1;
+}
+.hero-img-box img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+@media (max-width: 960px) {
+  .hero-grid { grid-template-columns: 1fr; gap: var(--sp-6); }
+}
+
+/* Who We Are Layout */
+.who-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: var(--sp-8);
+  align-items: center;
+}
+.who-img-box {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(26,29,32,0.06);
+  aspect-ratio: 4/3;
+  background: #EAE8E1;
+}
+.who-img-box img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+@media (max-width: 960px) {
+  .who-grid { grid-template-columns: 1fr; gap: var(--sp-6); }
+}
+</style>
+</head>
+<body data-page="home">
+
+<div data-include="header"></div>
+
+<!-- HERO SECTION -->
+<section class="hero-section">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">BUILDING YOUR DREAMS</span>
+        <h1 class="hero-title">We turn drawings into ground you can stand on.</h1>
+        <div class="gold-line"></div>
+        <p class="hero-desc">
+          A N Constructions plans, designs, and builds residential and commercial projects — from the first site visit to the final handover.
+        </p>
+        <a href="/pages/contact.html" class="btn-primary">Request a Quote →</a>
+      </div>
+      <div class="hero-img-box">
+        <img src="/images/hero_modern_house.png" alt="A N Constructions Modern Luxury Architecture">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE ARE SECTION -->
+<section class="section" style="background: var(--paper); border-top: var(--border);">
+  <div class="wrap">
+    <div class="who-grid">
+      <div class="who-img-box">
+        <img src="/images/who_we_are_interior.png" alt="A N Constructions Interior Craftsmanship">
+      </div>
+      <div>
+        <span class="eyebrow">WHO WE ARE</span>
+        <h2 style="font-size: var(--fs-xl);">Building with passion.<br>Delivering with pride.</h2>
+        <div class="gold-line"></div>
+        <p style="color: var(--steel); font-size: var(--fs-sm); max-width: 52ch; margin-bottom: var(--sp-4);">
+          With years of experience and a dedicated team, we deliver quality construction that stands the test of time. We believe in transparency, integrity, and unmatched craftsmanship.
+        </p>
+        <div class="feature-cols">
+          <div class="feature-col">
+            <div class="feature-icon-badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <span>Expert Team</span>
+          </div>
+          <div class="feature-col">
+            <div class="feature-icon-badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+            </div>
+            <span>Quality Work</span>
+          </div>
+          <div class="feature-col">
+            <div class="feature-icon-badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <span>On-Time Delivery</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES SECTION ("WHAT WE DO") -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-center" style="margin-bottom: var(--sp-7);">
+      <span class="eyebrow">WHAT WE DO</span>
+      <h2 style="font-size: var(--fs-xl);">Our Services</h2>
+      <div class="gold-line center"></div>
+    </div>
+
+    <div class="grid-4">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        </div>
+        <h3>Planning &amp; Design</h3>
+        <p>Smart designs that combine creativity, functionality, and sustainability.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+        </div>
+        <h3>Construction</h3>
+        <p>High-quality construction with precision and attention to every detail.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 20h20"></path><path d="M5 20v-8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8"></path><path d="M12 4v6"></path><path d="M8 7h8"></path></svg>
+        </div>
+        <h3>Renovation</h3>
+        <p>Transforming spaces with modern solutions and expert craftsmanship.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="9" y1="6" x2="9.01" y2="6"></line><line x1="15" y1="6" x2="15.01" y2="6"></line><line x1="9" y1="10" x2="9.01" y2="10"></line><line x1="15" y1="10" x2="15.01" y2="10"></line><line x1="9" y1="14" x2="9.01" y2="14"></line><line x1="15" y1="14" x2="15.01" y2="14"></line><line x1="9" y1="18" x2="15" y2="18"></line></svg>
+        </div>
+        <h3>Project Management</h3>
+        <p>End-to-end management ensuring smooth execution and timely delivery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PROJECTS SECTION ("OUR WORK") -->
+<section class="section" style="background: var(--paper); border-top: var(--border);">
+  <div class="wrap">
+    <div class="section-center" style="margin-bottom: var(--sp-7);">
+      <span class="eyebrow">OUR WORK</span>
+      <h2 style="font-size: var(--fs-xl);">Featured Projects</h2>
+      <div class="gold-line center"></div>
+    </div>
+
+    <div class="grid-4" style="margin-bottom: var(--sp-7);">
+      <div class="project-grid-card">
+        <div class="project-img-box">
+          <img src="/images/project_modern_residence.png" alt="Modern Residence">
+        </div>
+        <div class="project-info">
+          <h3>Modern Residence</h3>
+          <p>Bangalore</p>
+        </div>
+      </div>
+
+      <div class="project-grid-card">
+        <div class="project-img-box">
+          <img src="/images/project_commercial_building.png" alt="Commercial Complex">
+        </div>
+        <div class="project-info">
+          <h3>Commercial Complex</h3>
+          <p>Bangalore</p>
+        </div>
+      </div>
+
+      <div class="project-grid-card">
+        <div class="project-img-box">
+          <img src="/images/project_villa_pool.png" alt="Luxury Villa">
+        </div>
+        <div class="project-info">
+          <h3>Luxury Villa</h3>
+          <p>Bangalore</p>
+        </div>
+      </div>
+
+      <div class="project-grid-card">
+        <div class="project-img-box">
+          <img src="/images/project_interior_dining.png" alt="Interior Project">
+        </div>
+        <div class="project-info">
+          <h3>Interior Project</h3>
+          <p>Bangalore</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center;">
+      <a href="/pages/projects.html" class="btn-ghost">View All Projects →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="cta-box">
+  <div class="wrap">
+    <h2>Ready to build something exceptional?</h2>
+    <a href="/pages/contact.html" class="btn-primary">Get a Quote →</a>
+  </div>
+</section>
+
+<div data-include="footer"></div>
+
+<script src="/js/include.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
+
+

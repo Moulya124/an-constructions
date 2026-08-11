@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — A N Constructions</title>
+<meta name="description" content="Get in touch with lead engineers Akash E and Nayan Raj N at A N Constructions for civil engineering, contracting, and construction quotations.">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.contact-grid-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--sp-8);
+  align-items: start;
+}
+.contact-form-card {
+  background: var(--paper-card);
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-7);
+  box-shadow: var(--shadow-card);
+}
+.contact-info-panel {
+  background: var(--paper-card);
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-7);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-4);
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+.form-group label {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: var(--paper);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  color: var(--ink);
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  background: var(--white);
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(197, 155, 39, 0.15);
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  margin-top: var(--sp-2);
+}
+.form-status {
+  font-size: var(--fs-sm);
+  font-weight: 500;
+}
+.form-status.success {
+  color: #15803d;
+}
+.form-status.error {
+  color: #b91c1c;
+}
+.info-block h3 {
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+.info-block p, .info-block a {
+  color: var(--steel);
+  font-size: 14px;
+  font-family: var(--font-body);
+}
+.info-block a:hover {
+  color: var(--gold);
+}
+@media (max-width: 900px) {
+  .contact-grid-layout { grid-template-columns: 1fr; gap: var(--sp-6); }
+}
+@media (max-width: 640px) {
+  .form-grid { grid-template-columns: 1fr; }
+  .contact-form-card, .contact-info-panel { padding: var(--sp-5); }
+}
+</style>
+</head>
+<body data-page="contact">
+
+<div data-include="header"></div>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-center" style="margin-bottom: var(--sp-7);">
+      <span class="eyebrow">GET IN TOUCH</span>
+      <h1 style="font-size: var(--fs-xl);">Contact Us</h1>
+      <div class="gold-line center"></div>
+      <p style="color: var(--steel); max-width: 54ch;">
+        Tell us about your construction project, civil contracting requirements, or site plans and our lead engineers will get back to you.
+      </p>
+    </div>
+
+    <div class="contact-grid-layout">
+      <!-- CONTACT FORM CARD -->
+      <div class="contact-form-card">
+        <form id="contactForm" novalidate class="contact-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input id="name" name="name" type="text" maxlength="100" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" maxlength="150" placeholder="name@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" maxlength="30" placeholder="+91 98765 43210">
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" maxlength="200" placeholder="Construction / Contracting Enquiry">
+            </div>
+            <div class="form-group full-width">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" maxlength="5000" placeholder="Describe your plot dimensions, site location, estimated budget, or project timeline..." required></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" id="submitBtn" class="btn-primary">Send Enquiry →</button>
+            <p id="formStatus" role="status" aria-live="polite" class="form-status"></p>
+          </div>
+        </form>
+      </div>
+
+      <!-- CONTACT INFO PANEL -->
+      <div class="contact-info-panel">
+        <div>
+          <span class="eyebrow">DIRECT LINES</span>
+          <h2 style="font-size: 20px; margin-bottom: var(--sp-4);">Contact Our Engineers</h2>
+        </div>
+
+        <div class="info-block">
+          <span class="eyebrow" style="font-size: 11px;">LEAD ENGINEER &amp; CONTRACTOR</span>
+          <h3>Akash E</h3>
+          <p><a href="tel:+919686542217">+91 96865 42217</a></p>
+        </div>
+
+        <div class="info-block">
+          <span class="eyebrow" style="font-size: 11px;">LEAD ENGINEER &amp; CONTRACTOR</span>
+          <h3>Nayan Raj N</h3>
+          <p><a href="tel:+918722020750">+91 87220 20750</a></p>
+        </div>
+
+        <div class="info-block" style="border-top: var(--border); padding-top: var(--sp-4);">
+          <span class="eyebrow" style="font-size: 11px;">OFFICIAL EMAIL</span>
+          <p><a href="mailto:prasadmoulya35@gmail.com">prasadmoulya35@gmail.com</a></p>
+        </div>
+
+        <div class="info-block">
+          <span class="eyebrow" style="font-size: 11px;">INSTAGRAM</span>
+          <p><a href="https://instagram.com/AN__constructions" target="_blank" rel="noopener">@AN__constructions</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div data-include="footer"></div>
+
+<script src="/js/include.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/contact.js"></script>
+
+</body>
+</html>
+
+
+

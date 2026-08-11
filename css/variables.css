@@ -1,0 +1,54 @@
+/* ==========================================================
+   A N Constructions — Design Tokens (Reference Match)
+   Clean warm off-white, charcoal typography, gold accents,
+   Plus Jakarta Sans & Inter typography.
+   ========================================================== */
+
+:root {
+  /* --- Color Palette --- */
+  --paper: #FAF9F6;
+  --paper-card: #FFFFFF;
+  --white: #FFFFFF;
+  --ink: #1A1D20;
+  --ink-soft: #2B2F33;
+  --steel: #5A626A;
+  --steel-light: #8A929A;
+  --gold: #C59B27;
+  --gold-dark: #A8811A;
+  --gold-light: #F7F3E6;
+  --line: #E8E6DE;
+  --line-strong: #D5D2C7;
+
+  /* --- Typography --- */
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-base: 16px;
+  --fs-md: 18px;
+  --fs-lg: 22px;
+  --fs-xl: clamp(28px, 3.6vw, 40px);
+  --fs-hero: clamp(38px, 4.8vw, 54px);
+
+  /* --- Spacing Scale (4px base) --- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 96px;
+
+  /* --- Layout & Utilities --- */
+  --max-width: 1240px;
+  --radius: 6px;
+  --border: 1px solid var(--line);
+  --shadow-sm: 0 4px 12px rgba(26,29,32,0.03);
+  --shadow-card: 0 10px 30px rgba(26,29,32,0.04);
+  --shadow-hover: 0 16px 40px rgba(26,29,32,0.08);
+}
+
