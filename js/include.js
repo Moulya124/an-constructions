@@ -35,9 +35,25 @@
     const toggle = document.getElementById('nav-toggle');
     const links = document.getElementById('nav-links');
     if (!toggle || !links) return;
-    toggle.addEventListener('click', () => {
+
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       const isOpen = links.classList.toggle('open');
       toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.addEventListener('click', (e) => {
+      if (links.classList.contains('open') && !links.contains(e.target) && !toggle.contains(e.target)) {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    links.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
     });
   }
 
