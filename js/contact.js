@@ -1,47 +1,50 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("contactForm");
-  if (!form) return;
+    const form = document.getElementById("contactForm");
 
-  const status = document.getElementById("formStatus");
-  const button = document.getElementById("submitBtn");
-
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
+    if (!form) {
+        return;
     }
 
-    const payload = Object.fromEntries(new FormData(form).entries());
-    button.disabled = true;
-    button.textContent = "Sending...";
-    status.className = "form-status";
-    status.textContent = "";
+    const status = document.getElementById("formStatus");
+    const button = document.getElementById("submitBtn");
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      });
+    /*
+     * FormSubmit handles the actual email submission.
+     *
+     * This JavaScript only:
+     * - validates the form
+     * - shows "Sending..."
+     * - prevents double-clicks
+     *
+     * It does NOT call /api/contact.
+     */
 
-      const result = await response.json();
+    form.addEventListener("submit", (event) => {
 
-      if (!response.ok || !result.success) {
-        throw new Error(result.message || "Unable to send your enquiry.");
-      }
+        if (!form.checkValidity()) {
+            event.preventDefault();
+            form.reportValidity();
+            return;
+        }
 
-      status.className = "form-status success";
-      status.textContent = "Thank you! Your enquiry has been submitted successfully.";
-      form.reset();
-    } catch (error) {
-      status.className = "form-status error";
-      status.textContent = error.message || "Something went wrong. Please try again.";
-    } finally {
-      button.disabled = false;
-      button.textContent = "Send Enquiry →";
-    }
-  });
+        if (button) {
+            button.disabled = true;
+            button.textContent = "Sending...";
+        }
+
+        if (status) {
+            status.className = "form-status";
+            status.textContent = "Sending your enquiry...";
+        }
+
+        /*
+         * IMPORTANT:
+         * Do NOT call event.preventDefault() here.
+         *
+         * The normal form submission goes to:
+         * https://formsubmit.co/your-email
+         *
+         * FormSubmit then sends the enquiry by email.
+         */
+    });
 });
-
