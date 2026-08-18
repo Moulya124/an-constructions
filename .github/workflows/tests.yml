@@ -33,4 +33,11 @@ jobs:
         env:
           BASE_URL: https://an-constructions.onrender.com
         run: |
-          pytest -v
+          pytest -v --html=reports/pytest-report.html --self-contained-html
+
+      - name: Upload test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: selenium-test-report
+          path: reports/pytest-report.html
