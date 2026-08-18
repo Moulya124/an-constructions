@@ -1,10 +1,12 @@
-from page_objects.base_page import BasePage
 from selenium.webdriver.common.by import By
+
+from config import BASE_URL
+from page_objects.base_page import BasePage
 
 
 class HomePage(BasePage):
 
-    URL = "https://an-constructions.onrender.com"
+    URL = BASE_URL
 
     CONTACT_LINK = (By.LINK_TEXT, "Contact")
 

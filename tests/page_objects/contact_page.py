@@ -1,10 +1,11 @@
+from config import BASE_URL
 from page_objects.base_page import BasePage
 from selenium.webdriver.common.by import By
 
 
 class ContactPage(BasePage):
 
-    URL = "https://an-constructions.onrender.com/pages/contact.html"
+    URL = f"{BASE_URL}/pages/contact.html"
 
     CONTACT_FORM = (By.ID, "contactForm")
 
