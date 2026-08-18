@@ -1,21 +1,14 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 
+from page_objects.home_page import HomePage
+
 
 def test_contact_navigation(driver):
-    driver.get("https://an-constructions.onrender.com")
+    home_page = HomePage(driver)
 
-    WebDriverWait(driver, 30).until(
-        lambda d: d.find_element(
-            By.LINK_TEXT, "Contact"
-        ).is_displayed()
-    )
-
-    contact_link = driver.find_element(
-        By.LINK_TEXT, "Contact"
-    )
-
-    contact_link.click()
+    home_page.open()
+    home_page.click_contact()
 
     WebDriverWait(driver, 30).until(
         lambda d: d.find_element(
