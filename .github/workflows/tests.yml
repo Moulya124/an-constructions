@@ -41,3 +41,11 @@ jobs:
         with:
           name: selenium-test-report
           path: reports/pytest-report.html
+        
+      - name: Upload failure screenshots
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: selenium-failure-screenshots
+          path: screenshots/
+          if-no-files-found: ignore
