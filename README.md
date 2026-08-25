@@ -55,3 +55,7 @@ construction/
 │
 ├── .gitignore
 └── README.md
+
+## Automated Testing
+
+This project uses Selenium, pytest, and GitHub Actions for automated testing.
