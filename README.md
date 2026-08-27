@@ -59,3 +59,7 @@ construction/
 ## Automated Testing
 
 This project uses Selenium, pytest, and GitHub Actions for automated testing.
+
+## Development Workflow
+
+Changes are developed on feature branches and validated with automated Selenium tests before being merged into main.
